@@ -67,8 +67,8 @@ $(function () {
         map.getPane('labels').style.zIndex = 650;
         map.getPane('labels').style.pointerEvents = 'none';
         map.setView({
-            lat: 13.4532334981611, 
-            lng: 101.186931124051
+            lat: 16.0715187, 
+            lng: 99.3747862
         }, zoom_map);
         //Locate
         var lc = L.control.locate({
@@ -80,7 +80,7 @@ $(function () {
                 enableHighAccuracy: true
             },
         }).addTo(map);
-        $.getJSON("https://www-old.cmuccdc.org/api2/dustboy/phanat?v=1", function (db) {
+        $.getJSON("https://www-old.cmuccdc.org/api2/dustboy/khlonglanpattana?v=1", function (db) {
             if (db) {
                 $.each(db, function (index, value) {
                     var marker = {};

@@ -16,8 +16,8 @@ $(function () {
     var location_lng;
 
     function showPosition(position) {
-        location_lat = position.coords.latitude != null ? position.coords.latitude : 13.4532334981611;
-        location_lng = position.coords.longitude != null ? position.coords.longitude : 101.186931124051;
+        location_lat = position.coords.latitude != null ? position.coords.latitude : 16.0715187;
+        location_lng = position.coords.longitude != null ? position.coords.longitude : 99.3747862;
         var normalMap = L.tileLayer.ThaiProvider('Google.Normal.Map', {
                 maxZoom: 18,
                 minZoom: 5
@@ -68,7 +68,7 @@ $(function () {
             var data_index = $('.cate_aqi .dropdown-item.active').attr('data-index');
             var url;
             if (data_category == '2') {
-                url = 'https://www-old.cmuccdc.org/api2/dustboy/phanat?v=1';
+                url = 'https://www-old.cmuccdc.org/api2/dustboy/khlonglanpattana?v=1';
             } else {
                 url = 'https://www-old.cmuccdc.org/api2/dustboy/stations?v=1';
             }
@@ -127,7 +127,7 @@ $(function () {
         function getjson(url, index) {
             var data_url;
             if (!url) {
-                data_url = 'https://www-old.cmuccdc.org/api2/dustboy/phanat?v=1';
+                data_url = 'https://www-old.cmuccdc.org/api2/dustboy/khlonglanpattana?v=1';
             } else {
                 data_url = url;
             }
